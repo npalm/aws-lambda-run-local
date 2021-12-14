@@ -1,6 +1,9 @@
 import { SendMessageCommand, SQSClient } from '@aws-sdk/client-sqs';
 import { Context, ScheduledEvent } from 'aws-lambda';
 
+const client = new SQSClient({});
+
+
 function getEnvVariable(name: string, defaultValue?: string): string {
   let value = process.env[name];
   if (value === undefined) {
@@ -19,7 +22,6 @@ export async function handler(event: ScheduledEvent, context: Context): Promise<
   console.log(context.awsRequestId);
 
   try {
-    const client = new SQSClient({});
 
     const queueUrl = getEnvVariable('QUEUE_URL');
     const message = getEnvVariable('MESSAGE', 'Hello World!');
