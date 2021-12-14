@@ -1,0 +1,33 @@
+name: Lambda
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/lambda.yml
+      - "lambda/**"
+  pull_request:
+    paths:
+      - .github/workflows/lambda.yml
+      - "lambda/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: node:14
+    defaults:
+      run:
+        working-directory: lambda
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: yarn install
+      - name: Run prettier
+        run: yarn format-check
+      - name: Run linter
+        run: yarn lint
+      - name: Run tests
+        run: yarn test
+      - name: Build distribution
+        run: yarn build

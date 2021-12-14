@@ -1,0 +1,27 @@
+name: Terraform
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/terraform.yml
+      - "terraform/**"
+  pull_request:
+    paths:
+      - .github/workflows/terraform.yml
+      - "terraform/**"
+
+jobs:
+  validate:
+    name: Check Terraform code
+    strategy:
+      matrix:
+        terraform: [1.1.0]
+    runs-on: ubuntu-latest
+    container:
+      image: hashicorp/terraform:${{ matrix.terraform }}
+    steps:
+      - uses: actions/checkout@v2
+      - run: terraform init
+      - run: terraform fmt --recursive -check=true
+      - run: terraform validate
