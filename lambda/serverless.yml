@@ -1,0 +1,10 @@
+service: aws-blog-test
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  lambdaHashingVersion: 20201221
+
+functions:
+  BlogTest:
+    handler: dist/index.handler

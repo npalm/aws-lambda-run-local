@@ -1,0 +1,40 @@
+{
+    "configurations": [
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "sam-local-test:src/lambda.handler (nodejs14.x)",
+            "invokeTarget": {
+                "target": "code",
+                "projectRoot": "${workspaceFolder}/lambda",
+                "lambdaHandler": "src/lambda.handler"
+            },
+            "lambda": {
+                "runtime": "nodejs14.x",
+                "payload": {},
+                "environmentVariables": {
+                    "QUEUE_URL": "${env:QUEUE_URL}"
+                }
+            },
+            "aws": {
+                "credentials": "profile:blog-test"
+            }
+        },
+        {
+            "cwd": "${workspaceRoot}/lambda/",
+            "type": "node",
+            "request": "launch",
+            "name": "wrapper-local-test:src/lambda.handler",
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "args": [
+                "${workspaceFolder}/lambda/src/local.ts"
+            ],
+            "env": {
+                "QUEUE_URL": "${env:QUEUE_URL}"                    "
+            }
+        }
+    ]
+}

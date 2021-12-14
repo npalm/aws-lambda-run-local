@@ -1,0 +1,19 @@
+# state
+*.tfstate*
+
+# Module directory
+.terraform/
+
+# keys
+*id_rsa*
+
+# other
+*.out
+secrets.auto.tfvars
+.envrc
+*.zip
+*.gz
+*.tgz
+*.env*
+
+**/coverage/*
