@@ -2,19 +2,21 @@
 # Manual edits may be lost in future updates.
 
 provider "registry.terraform.io/hashicorp/aws" {
-  version = "3.69.0"
+  version     = "4.27.0"
+  constraints = ">= 3.0.0"
   hashes = [
-    "h1:PBvQ5w86YSJqL5x7lAwKYxdd7NRyNCTlXz3S61VQWZk=",
-    "zh:0cedd84ba908ba7190052b16cd7f70c41b0e2c2e914e54eecf2e3dae193f47fa",
-    "zh:14b89bac6412e20d415fe67d5f2eaa1414d9bbf75a5bd8fc963f6ab8e3b8b1a0",
-    "zh:159131129edab7ea118dee7d6daf1bfe4615f200a2d5120deb8369cbd2c4b598",
-    "zh:32a3a35964c9becb167180df905f34eb0cae7c30e00452527a0e600ee95c033f",
-    "zh:5330374066ca27d9a00ca667c81183c1dbfa0fcfdd5c1797a6185b76bc7c13bc",
-    "zh:78b75c45b7c660efaf89428ca988a77a4f55eba359f95ed7a54efe87fad1ab8b",
-    "zh:81f723c3f33dc0761ed12b025c1f411fe22f2c6a97e22f4adeb10f7668a5df8f",
-    "zh:98053adb091233fea8c1a82768dfce994e8407e2cb948d28ff88865d2d9a4dcd",
-    "zh:a52866826b51c0b4cb6b970cb3328542846e108c8f4d24c090d7ca0ffa341e44",
-    "zh:a9923cbdf30e9b66f889fef22e1f4b657d9ac1a48812f476ef841405a3c11525",
-    "zh:c079f98be9b8456e6eae6c07c5dcb84ecbcbb70b2f361f1c6f9c3ba90366d905",
+    "h1:JjDRnFkYnMTgW1OJclVkE7ucHPFXwhNzrdexhtj97Lo=",
+    "zh:0f5ade3801fec487641e4f7d81e28075b716c787772f9709cc2378d20f325791",
+    "zh:19ffa83be6b6765a4f821a17b8d260dd0f192a6c40765fa53ac65fd042cb1f65",
+    "zh:3ac89d33ff8ca75bdc42f31c63ce0018ffc66aa69917c18713e824e381950e4e",
+    "zh:81a199724e74992c8a029a968d211cb45277d95a2e88d0f07ec85127b6c6849b",
+    "zh:9b12af85486a96aedd8d7984b0ff811a4b42e3d88dad1a3fb4c0b580d04fa425",
+    "zh:a2e2c851a37ef97bbccccd2e686b4d016abe207a7f56bff70b10bfdf8ed1cbfd",
+    "zh:baf844def338d77f8a3106b1411a1fe22e93a82e3dc51e5d33b766f741c4a6a3",
+    "zh:bc33137fae808f91da0a9de7031cbea77d0ee4eefb4d2ad6ab7f58cc2111a7ff",
+    "zh:c960ae2b33c8d3327f67a3db5ce1952315146d69dfc3f1b0922242e2b218eec8",
+    "zh:f3ea1a25797c79c035463a1188a6a42e131f391f3cb714975ce49ccd301cda07",
+    "zh:f7e77c871d38236e5fedee0086ff77ff396e88964348c794cf38e578fcc00293",
+    "zh:fb338d5dfafab907b8608bd66cad8ca9ae4679f8c62c2435c2056a38b719baa2",
   ]
 }
