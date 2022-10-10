@@ -21,7 +21,7 @@ jobs:
     container:
       image: hashicorp/terraform:${{ matrix.terraform }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3.1.0
       - run: terraform init
       - run: terraform fmt --recursive -check=true
       - run: terraform validate

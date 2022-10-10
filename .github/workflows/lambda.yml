@@ -20,7 +20,7 @@ jobs:
         working-directory: lambda
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3.1.0
       - name: Install dependencies
         run: yarn install
       - name: Run prettier
